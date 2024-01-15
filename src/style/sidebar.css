@@ -29,7 +29,7 @@ body {
 #sidebar {
     background-color: beige;
     height: 100%;
-    padding: 24px;
+    padding: 24px 36px;
 }
 
 #main-content {

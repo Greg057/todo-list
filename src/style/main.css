@@ -1,0 +1,65 @@
+#main-content {
+    padding: 56px 158px;
+}
+
+.header-main {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+#add-task {
+    margin-top: 24px;
+    margin-left: 24px;
+}
+
+#tasks {
+    border-top: 1px solid lightgray;
+}
+
+.task-field form {
+    width: 100%;
+    display: grid;
+    gap: 22px;
+    grid-template-columns: 5fr 1fr 1.2fr 1fr;
+    border: 1px solid lightgray;
+    border-radius: 14px;
+    padding: 18px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+input, select, form button {
+    padding: 12px;
+    border: none;
+    background-color: transparent;
+    border-radius: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    font-size: 14px;
+    font-family: Poppins;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    width: 100%;
+    padding: 24px 0;
+    font-size: 18px;
+    border-bottom: 1px solid lightgray;
+}
+
+.task-text {
+    flex-grow: 1;
+}
+
+#high {
+    color: rgb(207, 18, 18);
+}
+
+#medium {
+    color: rgb(6, 52, 202);
+}
+
+#low {
+    color: rgba(169, 179, 174, 0.87);
+}
