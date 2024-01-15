@@ -5,6 +5,7 @@ class Task {
         this.text = text
         this.priority = priority
         this.dueDate = dueDate
+        
     }
 
     createUI () {
@@ -16,7 +17,7 @@ class Task {
                                 <div>${this.dueDate}</div>
                                 <span class="material-symbols-outlined" id=${this.priority}>priority_high</span>
                                 <span class="material-symbols-outlined">edit</span>
-                                <span class="material-symbols-outlined">delete</span>
+                                <span class="material-symbols-outlined" id="remove-button">delete</span>
                             </div>`
         tasks.appendChild(taskItem)
 
@@ -26,11 +27,15 @@ class Task {
         const addTaskBtn = document.querySelector("#add-task")
         addTaskBtn.style.visibility = "visible"
 
+        const removeButtons = document.querySelectorAll("#remove-button")
+        removeButtons.forEach((button) => button.addEventListener("click", this.removeTask))
+
         return tasks
     }
 
-    removeTask () {
-
+    removeTask (event) {
+        const taskItem = event.target.parentNode
+        taskItem.parentNode.removeChild(taskItem)
     }
 
 
