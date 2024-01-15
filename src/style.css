@@ -7,6 +7,16 @@
 
 body {
     font-family: Poppins;
+    color: black;
+}
+
+#bold {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.material-symbols-outlined {
+    font-size: 26px;
 }
 
 #full-page {
@@ -19,8 +29,46 @@ body {
 #sidebar {
     background-color: beige;
     height: 100%;
+    padding: 24px;
 }
 
 #main-content {
     background-color: whitesmoke;
+}
+
+#profile {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 58px;
+}
+#profile img {
+    width: 75px;
+
+}
+
+#profile #text {
+    display: flex;
+    flex-direction: column;
+}
+
+#profile #text #small {
+    font-size: 18px;
+}
+
+#profile #text #big {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 18px;
+    margin-bottom: 16px;
+}
+
+#your-projects {
+    margin-top: 58px;
 }

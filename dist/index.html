@@ -3,12 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <title>Todo List</title>
 <script defer src="main.js"></script></head>
 <body>
     <div id="full-page">
         <div id="sidebar">
-            <div id="avatar"><img src="96437dcbc1cc68951d7f.png"><span></span></div>
+
+            <div id="profile">
+                <img src="e7d9da79efd1c2692cc9.png">
+                <div id="text">
+                    <div id="small">Hello, </div>
+                    <div id="big">John Doe</div>
+                </div>
+            </div>
+
+            <div id="your-tasks">
+                <div class="nav-item" id="bold">
+                    <div>Your Tasks</div>
+                </div>
+                <div class="nav-item">
+                    <span class="material-symbols-outlined">inbox</span>
+                    <div>Inbox</div>
+                </div>
+                <div class="nav-item">
+                    <span class="material-symbols-outlined">today</span>
+                    <div>Today</div>
+                </div>
+                <div class="nav-item">
+                    <span class="material-symbols-outlined">calendar_month</span>
+                    <div>This week</div>
+                </div>
+            </div>
+
+            <div id="your-projects">
+                <div class="nav-item" id="bold">
+                    <div>Your Projects</div>
+                </div>
+                <div id="projects">
+                </div>
+                <div class="nav-item" id="add-project">
+                    <span></span><span class="material-symbols-outlined">add_circle</span>
+                    <div>Add a project</div>
+                </div>
+            </div>
+
         </div>
         <div id="main-content">
 
