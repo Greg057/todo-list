@@ -11,10 +11,16 @@ module.exports = {
   },
   devtool: 'inline-source-map',
   plugins: [
-    new HtmlWebpackPlugin()
+    new HtmlWebpackPlugin({
+      template: './src/template.html',
+  })
   ],
   module: {
     rules: [
+      {
+        test: /\.html$/i,
+        loader: "html-loader",
+      },
       {
         test: /\.css$/i,
         use: ['style-loader', 'css-loader'],
