@@ -1,5 +1,8 @@
 
 function loadUIInbox () {
+    const header = document.querySelector(".header-main")
+    header.textContent = "Inbox"
+
     const addTask = document.querySelector("#add-task")
     addTask.style.display = "flex"
 
@@ -39,6 +42,24 @@ function loadUIThisWeek () {
     })
 }
 
+function loadUIProject (projectName) {
+    const header = document.querySelector(".header-main")
+    header.textContent = projectName
+
+    const addTask = document.querySelector("#add-task")
+    addTask.style.display = "flex"
+    
+    const taskItems = document.querySelectorAll(".task-item")
+    taskItems.forEach((task) => {
+        if (task.id !== `project-${header.textContent}`) {
+            task.style.display = "none"
+        } else if (task.style.display === "none") {
+            task.style.display = "flex"
+        }
+              
+    })
+}
+
 function getDate(text) {
     let today = new Date();
     let dd = today.getDate();
@@ -70,4 +91,4 @@ function getDate(text) {
     
 }
 
-export { loadUIInbox, loadUIToday, loadUIThisWeek }
+export { loadUIInbox, loadUIToday, loadUIThisWeek, loadUIProject }

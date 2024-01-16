@@ -89,6 +89,6 @@ input, select, form button {
     color: rgba(169, 179, 174, 0.87);
 }
 
-#remove-button-project {
-    margin-left: auto;
+#project-name {
+    flex: 1;
 }

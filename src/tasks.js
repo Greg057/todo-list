@@ -1,17 +1,17 @@
 
 
 class Task {
-    constructor(text, priority = "low", dueDate = null) {
+    constructor(text, priority = "low", dueDate = null, project = null) {
         this.text = text
         this.priority = priority
         this.dueDate = dueDate
-        
+        this.project = project
     }
 
     createUI () {
         const tasks = document.querySelector("#tasks")
         const taskItem = document.createElement("div")
-        taskItem.innerHTML = `<div class="task-item">
+        taskItem.innerHTML = `<div class="task-item" id="project-${this.project}">
                                 <span class="material-symbols-outlined clickable" id="complete-task">radio_button_unchecked</span>
                                 <div class="task-text">${this.text}</div>
                                 <div class="date">${this.dueDate}</div>
@@ -53,8 +53,17 @@ function addTask (event) {
     const textForm = document.getElementById("text-field").value
     const priorityForm = document.querySelector("#priority").value
     const dateForm = document.querySelector("#date").value
-    const task = new Task(textForm, priorityForm, dateForm)
-    task.createUI()
+
+    const header = document.querySelector(".header-main").textContent
+    const headerText = ["Today", "This week", "Inbox"]
+    if (!headerText.includes(header)) {
+        const task = new Task(textForm, priorityForm, dateForm, header)
+        task.createUI()
+    } else {
+        const task = new Task(textForm, priorityForm, dateForm)
+        task.createUI()
+    }
+    
 
 }
 

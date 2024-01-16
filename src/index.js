@@ -26,3 +26,5 @@ function openMain (text) {
 
 const addProjectBtn = document.querySelector("#add-project")
 addProjectBtn.addEventListener("click", openProjectInput)
+
+
