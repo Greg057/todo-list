@@ -14,7 +14,7 @@ class Task {
         taskItem.innerHTML = `<div class="task-item">
                                 <span class="material-symbols-outlined" id="complete-task">radio_button_unchecked</span>
                                 <div class="task-text">${this.text}</div>
-                                <div>${this.dueDate}</div>
+                                <div class="date">${this.dueDate}</div>
                                 <span class="material-symbols-outlined" id=${this.priority}>priority_high</span>
                                 <span class="material-symbols-outlined" id="remove-button">delete</span>
                             </div>`
