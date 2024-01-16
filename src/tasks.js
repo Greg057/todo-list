@@ -12,7 +12,7 @@ class Task {
         const tasks = document.querySelector("#tasks")
         const taskItem = document.createElement("div")
         taskItem.innerHTML = `<div class="task-item">
-                                <span class="material-symbols-outlined">radio_button_unchecked</span>
+                                <span class="material-symbols-outlined" id="complete-task">radio_button_unchecked</span>
                                 <div class="task-text">${this.text}</div>
                                 <div>${this.dueDate}</div>
                                 <span class="material-symbols-outlined" id=${this.priority}>priority_high</span>
@@ -29,10 +29,18 @@ class Task {
         const removeButtons = document.querySelectorAll("#remove-button")
         removeButtons.forEach((button) => button.addEventListener("click", this.removeTask))
 
+        const completeButtons = document.querySelectorAll("#complete-task")
+        completeButtons.forEach((button) => button.addEventListener("click", this.completeTask))
+
         return tasks
     }
 
     removeTask (event) {
+        const taskItem = event.target.parentNode
+        taskItem.parentNode.removeChild(taskItem)
+    }
+
+    completeTask (event) {
         const taskItem = event.target.parentNode
         taskItem.parentNode.removeChild(taskItem)
     }
@@ -72,8 +80,8 @@ function openTaskInput() {
     const addTaskBtn = document.querySelector("#add-task")
     addTaskBtn.style.visibility = "hidden"
 
-    const closeBtnS = document.querySelectorAll("#close")
-    closeBtnS.forEach((button) => button.addEventListener("click", closeInput))
+    const closeBtn = document.querySelector("#close")
+    closeBtn.addEventListener("click", closeInput)
 
     const textInput = document.querySelector("#text-field")
     textInput.addEventListener("keyup", success)
