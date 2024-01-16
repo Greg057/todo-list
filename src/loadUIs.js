@@ -32,6 +32,8 @@ function loadUIThisWeek () {
     taskItems.forEach((task) => {
         if (!getDate("week").includes(task.children[2].textContent)) {
             task.style.display = "none"
+        } else if (task.style.display === "none") {
+            task.style.display = "flex"
         }
               
     })

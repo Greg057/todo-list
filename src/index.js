@@ -2,13 +2,14 @@ import './style/sidebar.css';
 import './style/main.css';
 import { openTaskInput } from './tasks';
 import { loadUIInbox, loadUIToday, loadUIThisWeek } from './loadUIs';
+import { openProjectInput } from './project';
 
 
 const addTaskBtn = document.querySelector("#add-task")
 addTaskBtn.addEventListener("click", openTaskInput)
 
 
-const navItems = document.querySelectorAll(".clickable")
+const navItems = document.querySelectorAll(".change-UI")
 navItems.forEach((button) => {button.addEventListener("click", () => openMain(button.children[1].textContent))})
 
 function openMain (text) {
@@ -18,8 +19,10 @@ function openMain (text) {
         loadUIInbox()
     } else if (text === "Today") {
         loadUIToday()
-    }
-    else {
+    } else if (text === "This week") {
         loadUIThisWeek()
-    }
+    } 
 }
+
+const addProjectBtn = document.querySelector("#add-project")
+addProjectBtn.addEventListener("click", openProjectInput)

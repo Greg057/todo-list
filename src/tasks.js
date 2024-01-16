@@ -12,11 +12,11 @@ class Task {
         const tasks = document.querySelector("#tasks")
         const taskItem = document.createElement("div")
         taskItem.innerHTML = `<div class="task-item">
-                                <span class="material-symbols-outlined" id="complete-task">radio_button_unchecked</span>
+                                <span class="material-symbols-outlined clickable" id="complete-task">radio_button_unchecked</span>
                                 <div class="task-text">${this.text}</div>
                                 <div class="date">${this.dueDate}</div>
                                 <span class="material-symbols-outlined" id=${this.priority}>priority_high</span>
-                                <span class="material-symbols-outlined" id="remove-button">delete</span>
+                                <span class="material-symbols-outlined clickable remove-button" id="remove-button-task">delete</span>
                             </div>`
         tasks.appendChild(taskItem)
 
@@ -26,7 +26,7 @@ class Task {
         const addTaskBtn = document.querySelector("#add-task")
         addTaskBtn.style.visibility = "visible"
 
-        const removeButtons = document.querySelectorAll("#remove-button")
+        const removeButtons = document.querySelectorAll("#remove-button-task")
         removeButtons.forEach((button) => button.addEventListener("click", this.removeTask))
 
         const completeButtons = document.querySelectorAll("#complete-task")
@@ -72,8 +72,8 @@ function openTaskInput() {
                                     <option value="high">Priority high</option>
                                 </select>
                                 <input type="date" id="date"></input>
-                                <button type="submit" id="add-task-form" disabled>Add task</button>
-                                <span class="material-symbols-outlined" id="close">close</span>
+                                <button type="submit" class="clickable" id="add-task-form" disabled>Add task</button>
+                                <span class="material-symbols-outlined clickable" id="close">close</span>
                             </form>`
     tasks.appendChild(inputField)
 

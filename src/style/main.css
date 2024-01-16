@@ -2,6 +2,10 @@
     padding: 56px 158px;
 }
 
+.clickable {
+    cursor: pointer;
+}
+
 .header-main {
     font-size: 32px;
     font-weight: 700;
@@ -21,6 +25,20 @@
     margin-top: 12px;
 }
 
+.project-field form {
+    width: 100%;
+    box-sizing: border-box;
+    display: grid;
+    gap: 8px;
+    grid-template-columns: repeat(3, auto);
+    align-items: center;
+    border: 1px solid lightgray;
+    border-radius: 14px;
+    padding: 8px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+
 .task-field form {
     width: 100%;
     display: grid;
@@ -34,6 +52,8 @@
 }
 
 input, select, form button {
+    width: 100%;
+    box-sizing: border-box;
     padding: 12px;
     border: 2px solid lightgray;
     background-color: transparent;
@@ -57,7 +77,7 @@ input, select, form button {
     flex-grow: 1;
 }
 
-#high, #close {
+#high, #close, #close-project {
     color: rgb(207, 18, 18);
 }
 
@@ -67,4 +87,8 @@ input, select, form button {
 
 #low {
     color: rgba(169, 179, 174, 0.87);
+}
+
+#remove-button-project {
+    margin-left: auto;
 }
