@@ -72,11 +72,21 @@ function openTaskInput() {
     const addTaskBtn = document.querySelector("#add-task")
     addTaskBtn.style.visibility = "hidden"
 
+    const closeBtnS = document.querySelectorAll("#close")
+    closeBtnS.forEach((button) => button.addEventListener("click", closeInput))
+
     const textInput = document.querySelector("#text-field")
     textInput.addEventListener("keyup", success)
 
     const addTaskFormBtn = document.querySelector("#add-task-form")
     addTaskFormBtn.addEventListener("click", (event) => addTask(event))
+}
+
+function closeInput (event) {
+    const inputField = event.target.parentNode.parentNode
+    inputField.parentNode.removeChild(inputField)
+    const addTaskBtn = document.querySelector("#add-task")
+    addTaskBtn.style.visibility = "visible"
 }
 
 function success() {
