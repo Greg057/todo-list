@@ -9,5 +9,8 @@
         "ecmaVersion": "latest"
     },
     "rules": {
+        "no-use-before-define": ["error", {"functions": false, "classes": false}],
+        "no-param-reassign": ["error", { "props": false }],
+        "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }]
     }
 }

@@ -22,8 +22,8 @@ function loadUIToday() {
     if (task.children[2].textContent !== getDate('today')) {
       task.style.display = 'none';
     } else if (task.style.display === 'none') {
-        task.style.display = 'flex';
-      }
+      task.style.display = 'flex';
+    }
   });
 }
 
