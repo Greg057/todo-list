@@ -1,0 +1,11 @@
+{
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    },
+    "eslint.validate": ["javascript"],
+    "eslint.options": {
+        "rules": {
+            "no-use-before-define": ["error", {"functions": false, "classes": false}]
+        }
+    }
+}
